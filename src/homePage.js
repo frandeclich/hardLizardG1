@@ -1,4 +1,4 @@
-const fs = require('fs')
+const fs = require('fs') 
 
 let homeData= {
     titulo:  "Bienvenidos a DH Movies el mejor sitio para encontrar las mejores películas, incluso mucho mejor que Netflix, Cuevana y PopCorn.",
