@@ -1,6 +1,6 @@
 const fs = require('fs')
 
-homeData= {
+let homeData= {
     titulo:  "Bienvenidos a DH Movies el mejor sitio para encontrar las mejores películas, incluso mucho mejor que Netflix, Cuevana y PopCorn.",
     bd : './data/movies.json',
     leerJSON : function(){

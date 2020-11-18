@@ -1,6 +1,6 @@
-const fs = require('fs')
+const fs = require('fs') 
 
-carteleraData={
+let carteleraData={
     titulo:"En Cartelera.",
     bd:'./data/movies.json',
     leerJSON:function(){
