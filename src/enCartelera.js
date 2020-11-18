@@ -24,4 +24,5 @@ carteleraData={
         return arrayR
     }
 }
-console.log(carteleraData.reseñas())
+module.exports=carteleraData
+//console.log(carteleraData.reseñas())
