@@ -1,4 +1,4 @@
-# Grupo nro...
+# Grupo nro 1
 ## Trabajo: Hard Lizard
 ## Integrantes:
 - Frande
