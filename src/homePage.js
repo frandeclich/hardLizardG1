@@ -14,6 +14,7 @@ let homeData= {
         this.leerJSON().movies.forEach(movie => {
             arrayDeTitulos.push(movie.title)
         });
+        arrayDeTitulos.sort()
         return arrayDeTitulos
     }
 }
