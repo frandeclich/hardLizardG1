@@ -24,10 +24,10 @@ let index = {
 
         } 
         res.write('\n')
-        res.end('Recorda que podes visitar las secciones:
+        /* res.end('Recorda que podes visitar las secciones:
         i. En Cartelera
         ii. Mas Votadas
         iii. Sucursales
         iv. Contacto
-        v. Preguntas Frecuentes ')
-    },
+        v. Preguntas Frecuentes ') */
+    }}
