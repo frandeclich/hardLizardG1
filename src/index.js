@@ -10,7 +10,7 @@ let index = {
         res.write(homePage.titulo)
         res.write('\n')
         res.write('\n\n')
-        res.write('Total de peliculas en cartelera: ' + homePage.totalPelis())
+        res.write('Total de peliculas en cartelera: holaa ' + homePage.totalPelis())
         res.write('\n\n')
         res.write('--------------------------\n')
         res.write('Listado de Peliculas disponibles\n').toUpperCase()
