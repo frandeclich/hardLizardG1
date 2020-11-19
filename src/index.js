@@ -72,6 +72,10 @@ module.exports = {
         res.end()
     },
     sucursales:function(req,res){
+        res.write(sucursales.titulo)
+        res.write(`\nTotal de salas disponibles: ${sucursales.numeroSalas()}\n`)
+        res.write(`Listado de salas disponibles:\n`)
+        
         res.end()
     },
     contacto:function(req,res){
