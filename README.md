@@ -5,3 +5,5 @@
 - Cristian 
 - Dario
 - Brian
+- Fede
+- Santi
