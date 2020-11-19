@@ -89,6 +89,14 @@ module.exports = {
         res.end()
     },
     preguntasFrecuentes:function(req,res){
+        res.write(preguntasFrecuentes.titulo)
+        res.write(`\nNumero de preguntas frecuentes: ${preguntasFrecuentes.numeroPreguntas()}\n`)
+        function escribir(){
+            for(let i=0;i<preguntasFrecuentes.numeroPreguntas();i++){
+                res.write(`${i+1}.\ni. Preguntas: ${preguntasFrecuentes.preguntas()[i]}\nii. Respuestas: ${preguntasFrecuentes.respuestas}\n`)
+            }
+        }
+
         res.end()
     },
     respuesta:function(req,res){
