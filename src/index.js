@@ -74,8 +74,13 @@ module.exports = {
     sucursales:function(req,res){
         res.write(sucursales.titulo)
         res.write(`\nTotal de salas disponibles: ${sucursales.numeroSalas()}\n`)
-        res.write(`Listado de salas disponibles:\n`)
-        
+        res.write(`\nListado de salas disponibles:\n\n`)
+        function sucursal (){
+            for(let i=0;i<sucursales.numeroSalas();i++){
+                res.write(`${i+1}.\ni. Nombre: ${sucursales.salas()[i]}\nii. Dirección: ${sucursales.direccion()[i]}\niii. Descripción: ${sucursales.descripcion()[i]}\n\n`)
+            }
+        }
+        sucursal()
         res.end()
     },
     contacto:function(req,res){
@@ -87,7 +92,7 @@ module.exports = {
         res.end()
     },
     respuesta:function(req,res){
-        res.write(`Te diría ERROR 404 not found pero mejor te digo así cortísima que no pongas ${req.url} en la barrita de búsqueda.\nNos vemoos.`)
+        res.write(`Te diría ERROR 404 not found pero mejor te digo así cortísima que no pongas "${req.url}" en la barrita de búsqueda.\nNos vemoos.`)
         res.end()
     }
     
