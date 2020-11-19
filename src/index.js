@@ -5,18 +5,18 @@ let sucursales = require('./sucursales');
 let contacto = require('./contacto');
 let preguntasFrecuentes = require('./preguntasFrecuentes');
 
-let index = {
-    homePage: function(res) {
+module.exports = {
+    homePage: function(req,res) {
         res.write(homePage.titulo)
         res.write('\n')
         res.write('\n\n')
-        res.write('Total de peliculas en cartelera: holaa ' + homePage.totalPelis())
+        res.write('Total de peliculas en cartelera: holaa ' + homePage.totalDePeliculas())
         res.write('\n\n')
         res.write('--------------------------\n')
-        res.write('Listado de Peliculas disponibles\n').toUpperCase()
+        
         res.write('--------------------------')
         res.write('\n\n')
-        res.end
+        
         
         let titleMovies = homePage.listadoTitulos();
         for (title of titleMovies) {
@@ -31,21 +31,22 @@ let index = {
             res.write('iv. Contacto')
             res.write('v. Preguntas Frecuentes')
             res.write('\n\n')
-            res.end
+            res.end()
 
     },
-    enCartelera: function(res) {
+
+    enCartelera: function(req,res) {
         res.write('En Cartelera')
         res.write('\n')
         res.write('\n\n')
-        res.write('Total de peliculas en cartelera: ' + homePage.totalPelis())
-        enCartelera.titulos()
-        enCartelera.reseñas()
+        res.write('Total de peliculas en cartelera: ' + homePage.totalDePeliculas())
+        res.write('holaa ' + enCartelera.titulos())
+        res.write('holaa ' + enCartelera.reseñas())
         res.write('\n\n')
         res.write('--------------------------\n')
-        res.write('Listado de Peliculas disponibles\n').toUpperCase()
+        
         res.write('--------------------------')
         res.write('\n\n')
-        res.end
-    }
-
+        res.end()
+    },
+}
