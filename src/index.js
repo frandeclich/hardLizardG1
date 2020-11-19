@@ -1,5 +1,6 @@
 let homePage = require('./homePage');
 let enCartelera = require('./enCartelera');
+let cartelera = enCartelera.leerJSON();
 let masVotadas = require('./masVotadas');
 let sucursales = require('./sucursales');
 let contacto = require('./contacto');
@@ -12,8 +13,7 @@ module.exports = {
         res.write('\n\n')
         res.write('Total de peliculas en cartelera: holaa ' + homePage.totalDePeliculas())
         res.write('\n\n')
-        res.write('--------------------------\n')
-        
+        res.write('--------------------------\n')       
         res.write('--------------------------')
         res.write('\n\n')
         
@@ -40,13 +40,16 @@ module.exports = {
         res.write('\n')
         res.write('\n\n')
         res.write('Total de peliculas en cartelera: ' + homePage.totalDePeliculas())
-        res.write('holaa ' + enCartelera.titulos())
-        res.write('holaa ' + enCartelera.reseñas())
+        cartelera.movies.forEach(a => {
+            res.write('titulos: ' + a.title + '\n' +'reseñas: ' + a.overview + '\n\n' )
+        });
         res.write('\n\n')
-        res.write('--------------------------\n')
-        
-        res.write('--------------------------')
+        //res.write(´${enCartelera.titulos()}\n´)
         res.write('\n\n')
+        res.write('--------------------------\n')            
+        res.write('\n\n')
+        //res.write(enCartelera.reseñas())  
         res.end()
     },
+    
 }
