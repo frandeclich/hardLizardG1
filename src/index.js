@@ -93,10 +93,10 @@ module.exports = {
         res.write(`\nNumero de preguntas frecuentes: ${preguntasFrecuentes.numeroPreguntas()}\n`)
         function escribir(){
             for(let i=0;i<preguntasFrecuentes.numeroPreguntas();i++){
-                res.write(`${i+1}.\ni. Preguntas: ${preguntasFrecuentes.preguntas()[i]}\nii. Respuestas: ${preguntasFrecuentes.respuestas}\n`)
+                res.write(`${i+1}.\ni. Preguntas: ${preguntasFrecuentes.preguntas()[i]}\nii. Respuestas: ${preguntasFrecuentes.respuestas()[i]}\n`)
             }
         }
-
+        escribir()
         res.end()
     },
     respuesta:function(req,res){
