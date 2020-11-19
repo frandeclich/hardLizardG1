@@ -58,6 +58,30 @@ module.exports = {
         //res.write(enCartelera.reseñas())  
         res.end()
     },
+    masVotadas:function(req,res){
+        res.write(`${masVotadas.titulo}\n`)
+        res.write(`El total de películas que cumplen esta condición es de ${masVotadas.totalPelis()}\n`)
+        res.write(`Promedio del rating de estas películas: ${masVotadas.promedio()}\n`)
+        res.write(`\nPelículas:\n`)
+        function nombrar(){
+            for(let i=0;i<masVotadas.ranking().length;i++){
+                res.write(`${i+1}.\ni. Título: ${masVotadas.ranking()[i].title}\nii. Rating: ${masVotadas.ranking()[i].vote_average}\niii. Reseña: ${masVotadas.ranking()[i].overview}\n`)
+            }
+        }
+        nombrar()
+        res.end()
+    },
+    sucursales:function(req,res){
+        res.end()
+    },
+    contacto:function(req,res){
+        res.write(`${contacto.titulo}\n`)
+        res.write(`${contacto.contenido}\n`)
+        res.end()
+    },
+    preguntasFrecuentes:function(req,res){
+        res.end()
+    },
     respuesta:function(req,res){
         res.write(`Te diría ERROR 404 not found pero mejor te digo así cortísima que no pongas ${req.url} en la barrita de búsqueda.\nNos vemoos.`)
         res.end()
