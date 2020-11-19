@@ -6,7 +6,7 @@ let sucursales = {
     leerJSON : function(){
         return JSON.parse(fs.readFileSync(this.bd,'utf-8'));
     },
-    listadoDeSalas:function(){
+    numeroSalas:function(){
         return this.leerJSON().total_theaters
     },
     salas:function(){
@@ -32,7 +32,7 @@ let sucursales = {
     }
 }
 module.exports=sucursales
-console.log(sucursales.salas())
+//console.log(sucursales.descripcion())
 /*i. Nombre (nombre de la sala)
 ii. Dirección (ubicación de la sala)
 iii. Descripción (descripción de la sala)*/
