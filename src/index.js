@@ -9,36 +9,22 @@ let preguntasFrecuentes = require('./preguntasFrecuentes');
 module.exports = {
     homePage: function(req,res) {
         res.write(homePage.titulo)
-        res.write('\n')
-        res.write('\n\n')
+        res.write('\n\n\n')
         res.write('Total de peliculas en cartelera: ' + homePage.totalDePeliculas())
-        res.write('\n\n')
-        res.write('--------------------------\n')       
-        res.write('--------------------------')
-        res.write('\n\n')
-        
-        
+        res.write('\n\n--------------------------\n--------------------------\n\n')           
         let titleMovies = homePage.listadoTitulos();
         for (title of titleMovies) {
             res.write(title)
             res.write('\n')
-
         } 
         res.write('\n')
         res.write('Recordá que podés visitar las secciones:\n')
-        res.write('i. En Cartelera\n')
-        res.write('ii. Mas Votadas\n')            
-        res.write('iii. Sucursales\n')
-        res.write('iv. Contacto\n')
-        res.write('v. Preguntas Frecuentes\n')
-        res.write('\n\n')
+        res.write('i. En Cartelera\nii. Mas Votadas\niii. Sucursales\niv. Contacto\nv. Preguntas Frecuentes\n')
         res.end()
     },
-
     enCartelera: function(req,res) {
         res.write(enCartelera.titulo)
-        res.write('\n')
-        res.write('\n\n')
+        res.write('\n\n\n')
         res.write('Total de peliculas en cartelera: ' + homePage.totalDePeliculas())
         res.write('\n')
        /*  cartelera.movies.forEach(a => {
